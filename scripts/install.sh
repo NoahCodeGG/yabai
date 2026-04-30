@@ -55,10 +55,10 @@ if [ ! -w "$MAN_DIR" ]; then
     exit 1
 fi
 
-AUTHOR="asmvik"
+AUTHOR="NoahCodeGG"
 NAME="yabai"
-VERSION="7.1.24"
-EXPECTED_HASH="627487c6c390468ea86795198ecf2eab0dd90a6645f4a42225f9720b95b94a43"
+VERSION="7.1.24-patch.1"
+EXPECTED_HASH="9547f30b2158fc4fa1c12fa5b08cb22617ec4e454f853a205140d6d5b38e8865"
 TMP_DIR="./${AUTHOR}-${NAME}-v${VERSION}-installer"
 
 mkdir $TMP_DIR

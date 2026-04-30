@@ -48,6 +48,7 @@ char g_lock_file[MAXLEN];
 
 mach_port_t g_bs_port;
 int g_connection;
+int g_lock_handle;
 bool g_verbose;
 pid_t g_pid;
 
@@ -160,8 +161,8 @@ static inline bool configure_settings_and_acquire_lock(void)
     hook_autoreleasepool_release();
 #endif
 
-    int handle = open(g_lock_file, O_CREAT | O_WRONLY | O_CLOEXEC, 0600);
-    if (handle == -1) {
+    g_lock_handle = open(g_lock_file, O_CREAT | O_WRONLY | O_CLOEXEC, 0600);
+    if (g_lock_handle == -1) {
         error("yabai: could not create lock-file! abort..\n");
     }
 
@@ -173,7 +174,7 @@ static inline bool configure_settings_and_acquire_lock(void)
         .l_whence = SEEK_SET
     };
 
-    return fcntl(handle, F_SETLK, &lockfd) != -1;
+    return fcntl(g_lock_handle, F_SETLK, &lockfd) != -1;
 }
 #pragma clang diagnostic pop
 
@@ -202,7 +203,7 @@ static void parse_arguments(int argc, char **argv)
 
     if ((string_equals(argv[1], VERSION_OPT_LONG)) ||
         (string_equals(argv[1], VERSION_OPT_SHRT))) {
-        fprintf(stdout, "yabai-v%d.%d.%d\n", MAJOR, MINOR, PATCH);
+        fprintf(stdout, "yabai-v%d.%d.%d-patch.1\n", MAJOR, MINOR, PATCH);
         exit(EXIT_SUCCESS);
     }
 
