@@ -1,15 +1,15 @@
 '\" t
-.\" Title: yabai
-.\" Author: [see the "AUTHOR(S)" section]
+.\"     Title: yabai
+.\"    Author: [see the "AUTHOR(S)" section]
 .\" Generator: Asciidoctor 2.0.26
-.\" Date: 2026-05-08
-.\" Manual: Yabai Manual
-.\" Source: Yabai
-.\" Language: English
+.\"      Date: 2026-05-13
+.\"    Manual: Yabai Manual
+.\"    Source: Yabai
+.\"  Language: English
 .\"
-.TH "YABAI" "1" "2026-05-08" "Yabai" "Yabai Manual"
+.TH "YABAI" "1" "2026-05-13" "Yabai" "Yabai Manual"
 .ie \n(.g .ds Aq \(aq
-.el .ds Aq '
+.el       .ds Aq '
 .ss \n[.ss] 0
 .nh
 .ad l
@@ -18,14 +18,14 @@
 ..
 .als MTO URL
 .if \n[.g] \{\
-. mso www.tmac
-. am URL
-. ad l
-. .
-. am MTO
-. ad l
-. .
-. LINKSTYLE blue R < >
+.  mso www.tmac
+.  am URL
+.    ad l
+.  .
+.  am MTO
+.    ad l
+.  .
+.  LINKSTYLE blue R < >
 .\}
 .SH "NAME"
 yabai \- window manager
@@ -121,38 +121,38 @@ Print options to stdout and exit.
 .if n .RS 4
 .nf
 .fam C
-REGEX\& := \c
+REGEX\&       := \c
 .URL "https://www.gnu.org/software/findutils/manual/html_node/find_html/posix_002dextended\-regular\-expression\-syntax.html" "POSIX extended regular expression syntax" ""
 
-LABEL\& := arbitrary string/text used as an identifier
+LABEL\&       := arbitrary string/text used as an identifier
 
-LAYER\& := below | normal | above | auto
+LAYER\&       := below | normal | above | auto
 
-BOOL_SEL\& := on | off
+BOOL_SEL\&    := on | off
 
-FLOAT_SEL\& := 0 < <value> <= 1.0
+FLOAT_SEL\&   := 0 < <value> <= 1.0
 
-RULE_SEL\& := <index> | LABEL
+RULE_SEL\&    := <index> | LABEL
 
-SIGNAL_SEL\& := <index> | LABEL
+SIGNAL_SEL\&  := <index> | LABEL
 
-DIR_SEL\& := north | east | south | west
+DIR_SEL\&     := north | east | south | west
 
-STACK_SEL\& := stack.prev | stack.next | stack.first | stack.last | stack.recent | stack.<index (1\-based)>
+STACK_SEL\&   := stack.prev | stack.next | stack.first | stack.last | stack.recent | stack.<index (1\-based)>
 
-WINDOW_SEL\& := prev | next | first | last | recent | mouse | largest | smallest | sibling | first_nephew | second_nephew | uncle | first_cousin | second_cousin | STACK_SEL | DIR_SEL | <window id>
+WINDOW_SEL\&  := prev | next | first | last | recent | mouse | largest | smallest | sibling | first_nephew | second_nephew | uncle | first_cousin | second_cousin | STACK_SEL | DIR_SEL | <window id>
 
 DISPLAY_SEL := prev | next | first | last | recent | mouse | DIR_SEL | <arrangement index (1\-based)> | LABEL
 
-SPACE_SEL\& := prev | next | first | last | recent | mouse | <mission\-control index (1\-based)> | LABEL
+SPACE_SEL\&   := prev | next | first | last | recent | mouse | <mission\-control index (1\-based)> | LABEL
 
-EASING\& := ease_in_sine\& | ease_out_sine\& | ease_in_out_sine\& |
-ease_in_quad\& | ease_out_quad\& | ease_in_out_quad\& |
-ease_in_cubic | ease_out_cubic | ease_in_out_cubic |
-ease_in_quart | ease_out_quart | ease_in_out_quart |
-ease_in_quint | ease_out_quint | ease_in_out_quint |
-ease_in_expo\& | ease_out_expo\& | ease_in_out_expo\& |
-ease_in_circ\& | ease_out_circ\& | ease_in_out_circ
+EASING\&      := ease_in_sine\&  | ease_out_sine\&  | ease_in_out_sine\&  |
+               ease_in_quad\&  | ease_out_quad\&  | ease_in_out_quad\&  |
+               ease_in_cubic | ease_out_cubic | ease_in_out_cubic |
+               ease_in_quart | ease_out_quart | ease_in_out_quart |
+               ease_in_quint | ease_out_quint | ease_in_out_quint |
+               ease_in_expo\&  | ease_out_expo\&  | ease_in_out_expo\&  |
+               ease_in_circ\&  | ease_out_circ\&  | ease_in_out_circ
 .fam
 .fi
 .if n .RE
@@ -182,9 +182,9 @@ Specify top and bottom padding for a potential custom bar that you may be runnin
 .br
 \fImain\fP: Apply the given padding only to spaces located on the main display.
 .br
-\fIall\fP: Apply the given padding to all spaces regardless of their display.
+\fIall\fP:  Apply the given padding to all spaces regardless of their display.
 .br
-\fIoff\fP: Do not apply any special padding.
+\fIoff\fP:  Do not apply any special padding.
 .RE
 .sp
 \fBmenubar_opacity\fP [\fI<FLOAT_SEL>\fP]
@@ -435,7 +435,7 @@ If the selected space and the given space belong to the same display, this behav
 System Integrity Protection must be partially disabled.
 .RE
 .sp
-\fB\-\-create\fP [\fI<DISPLAY_SEL>\fP]
+\fB\-\-create\fP  [\fI<DISPLAY_SEL>\fP]
 .RS 4
 Create a new space on the given display.
 .br
@@ -742,18 +742,18 @@ DISPLAY
 .nf
 .fam C
 {
-"id": number,
-"uuid": string,
-"index": number,
-"label": string,
-"frame": object {
-"x": number,
-"y": number,
-"w": number,
-"h": number
-},
-"spaces": array of number,
-"has\-focus": bool
+    "id": number,
+    "uuid": string,
+    "index": number,
+    "label": string,
+    "frame": object {
+        "x": number,
+        "y": number,
+        "w": number,
+        "h": number
+    },
+    "spaces": array of number,
+    "has\-focus": bool
 }
 .fam
 .fi
@@ -765,18 +765,18 @@ SPACE
 .nf
 .fam C
 {
-"id": number,
-"uuid": string,
-"index": number,
-"label": string,
-"type": string,
-"display": number,
-"windows": array of number,
-"first\-window": number,
-"last\-window": number,
-"has\-focus": bool,
-"is\-visible": bool,
-"is\-native\-fullscreen": bool
+    "id": number,
+    "uuid": string,
+    "index": number,
+    "label": string,
+    "type": string,
+    "display": number,
+    "windows": array of number,
+    "first\-window": number,
+    "last\-window": number,
+    "has\-focus": bool,
+    "is\-visible": bool,
+    "is\-native\-fullscreen": bool
 }
 .fam
 .fi
@@ -788,44 +788,44 @@ WINDOW
 .nf
 .fam C
 {
-"id": number,
-"pid": number,
-"app": string,
-"title": string,
-"scratchpad": string,
-"frame": object {
-"x": number,
-"y": number,
-"w": number,
-"h": number,
-},
-"role": string,
-"subrole": string,
-"root\-window": bool,
-"display": number,
-"space": number,
-"level": number,
-"sub\-level": number,
-"layer": string,
-"sub\-layer": string,
-"opacity": number,
-"split\-type": string,
-"split\-child": string,
-"stack\-index": number,
-"can\-move": bool,
-"can\-resize": bool,
-"has\-focus": bool,
-"has\-shadow": bool,
-"has\-parent\-zoom": bool,
-"has\-fullscreen\-zoom": bool,
-"has\-ax\-reference": bool,
-"is\-native\-fullscreen": bool,
-"is\-visible": bool,
-"is\-minimized": bool,
-"is\-hidden": bool,
-"is\-floating": bool,
-"is\-sticky": bool,
-"is\-grabbed": bool
+    "id": number,
+    "pid": number,
+    "app": string,
+    "title": string,
+    "scratchpad": string,
+    "frame": object {
+        "x": number,
+        "y": number,
+        "w": number,
+        "h": number,
+    },
+    "role": string,
+    "subrole": string,
+    "root\-window": bool,
+    "display": number,
+    "space": number,
+    "level": number,
+    "sub\-level": number,
+    "layer": string,
+    "sub\-layer": string,
+    "opacity": number,
+    "split\-type": string,
+    "split\-child": string,
+    "stack\-index": number,
+    "can\-move": bool,
+    "can\-resize": bool,
+    "has\-focus": bool,
+    "has\-shadow": bool,
+    "has\-parent\-zoom": bool,
+    "has\-fullscreen\-zoom": bool,
+    "has\-ax\-reference": bool,
+    "is\-native\-fullscreen": bool,
+    "is\-visible": bool,
+    "is\-minimized": bool,
+    "is\-hidden": bool,
+    "is\-floating": bool,
+    "is\-sticky": bool,
+    "is\-grabbed": bool
 }
 .fam
 .fi
@@ -847,7 +847,7 @@ These windows can be identified by looking at the \f(CRhas\-ax\-reference\fP pro
 .br
 belongs to becomes active, yabai will automatically create an AX\-reference. The queries will from that point
 .br
-forwards contain complete information, and the window can be used with yabai window commands.
+forwards contain complete information, and the window  can be used with yabai window commands.
 .sp
 The properties that contain incorrect information for windows with \f(CRhas\-ax\-reference: false\fP are as follows:
 .sp
@@ -855,10 +855,10 @@ The properties that contain incorrect information for windows with \f(CRhas\-ax\
 .nf
 .fam C
 {
-"role": string,
-"subrole": string,
-"can\-move": bool,
-"can\-resize": bool
+    "role": string,
+    "subrole": string,
+    "can\-move": bool,
+    "can\-resize": bool
 }
 .fam
 .fi
@@ -1014,25 +1014,25 @@ System Integrity Protection must be partially disabled.
 .nf
 .fam C
 {
-"index": number,
-"label": string,
-"app": string,
-"title": string,
-"role": string,
-"subrole": string,
-"display": number,
-"space": number,
-"follow_space": bool,
-"opacity": number,
-"manage": bool (optional),
-"sticky": bool (optional),
-"mouse_follows_focus": bool (optional),
-"sub\-layer": string,
-"native\-fullscreen": bool (optional),
-"grid": string,
-"scratchpad": string,
-"one\-shot": bool,
-"flags": string
+    "index": number,
+    "label": string,
+    "app": string,
+    "title": string,
+    "role": string,
+    "subrole": string,
+    "display": number,
+    "space": number,
+    "follow_space": bool,
+    "opacity": number,
+    "manage": bool (optional),
+    "sticky": bool (optional),
+    "mouse_follows_focus": bool (optional),
+    "sub\-layer": string,
+    "native\-fullscreen": bool (optional),
+    "grid": string,
+    "scratchpad": string,
+    "one\-shot": bool,
+    "flags": string
 }
 .fam
 .fi
@@ -1300,13 +1300,13 @@ Arbitrary command executed through \fB/usr/bin/env sh \-c\fP
 .nf
 .fam C
 {
-"index": number,
-"label": string,
-"app": string,
-"title": string,
-"active": bool (optional),
-"event": string,
-"action": string
+    "index": number,
+    "label": string,
+    "app": string,
+    "title": string,
+    "active": bool (optional),
+    "event": string,
+    "action": string
 }
 .fam
 .fi
